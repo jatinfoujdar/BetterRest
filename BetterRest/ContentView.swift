@@ -30,13 +30,17 @@ struct ContentView: View {
                 
                 Stepper("\(coffeeAmount) cup(s)",value: $coffeeAmount , in: 1...20)
             }
+            .navigationTitle("Better Text")
+            .toolbar{
+                Button("Calculate", action: calculatedBedtime)
+            }
+          }
         }
+    func calculatedBedtime(){
+        
+     }
     }
-}
 
-func calculatedBedTime(){
-    
-}
 
 #Preview {
     ContentView()
