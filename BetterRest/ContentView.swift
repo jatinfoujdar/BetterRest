@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreML
 
 struct ContentView: View {
     @State private var sleepAmount = 8.0
@@ -37,7 +38,13 @@ struct ContentView: View {
           }
         }
     func calculatedBedtime(){
-        
+        do{
+            let config = MLModelConfiguration()
+            let model = try SleepCalculator(configuration: config)
+            
+        } catch{
+            
+        }
      }
     }
 
